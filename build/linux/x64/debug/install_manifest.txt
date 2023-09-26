@@ -8,5 +8,6 @@
 /home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/version.json
 /home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
 /home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/BookWise.png
 /home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 /home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf

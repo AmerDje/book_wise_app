@@ -10,4 +10,7 @@
 /home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
 /home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/BookWise.png
 /home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf
+/home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf
+/home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf
 /home/amer/FlutterProjects/book_wise_app/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf

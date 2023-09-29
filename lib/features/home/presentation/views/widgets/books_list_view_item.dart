@@ -8,7 +8,7 @@ class BooksListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        // padding: const EdgeInsets.all(4),
+        padding: const EdgeInsets.all(4),
         // margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 4),
         width: 95,
         decoration: const BoxDecoration(

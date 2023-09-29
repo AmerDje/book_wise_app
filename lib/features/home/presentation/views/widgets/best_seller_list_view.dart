@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 class BestSellerListView extends StatelessWidget {
   const BestSellerListView({
     super.key,
-    required this.controller,
+    required this.bestSellerListViewController,
   });
 
-  final ScrollController controller;
+  final ScrollController bestSellerListViewController;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        controller: controller,
+        controller: bestSellerListViewController,
         itemBuilder: (context, index) {
           return Container(
             height: 100,

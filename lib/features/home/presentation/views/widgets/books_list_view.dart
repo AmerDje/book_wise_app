@@ -9,19 +9,13 @@ class BooksListView extends StatefulWidget {
 }
 
 class _BooksListViewState extends State<BooksListView> {
-  final ScrollController controller = ScrollController();
+  final ScrollController booksListViewItemController = ScrollController();
 
   int firstVisibleItemIndex = 0;
   @override
   void initState() {
     super.initState();
-    controller.addListener(() {
-      final currentOffset = controller.offset;
-      firstVisibleItemIndex = (currentOffset ~/
-          104); //.floor(); start from the first offset when the item disappear change the number until it works,
-      //by using this we can know the index of the first visible item when scrolling
-      setState(() {});
-    });
+    booksListViewItemControllerListener();
   }
 
   @override
@@ -30,7 +24,7 @@ class _BooksListViewState extends State<BooksListView> {
       //this or expanded to solve render box error
       height: 150,
       child: ListView.builder(
-        controller: controller,
+        controller: booksListViewItemController,
         // itemExtent: 100,//determine the size of the children
         scrollDirection: Axis.horizontal,
         itemCount: 50,
@@ -45,6 +39,16 @@ class _BooksListViewState extends State<BooksListView> {
         },
       ),
     );
+  }
+
+  void booksListViewItemControllerListener() {
+    booksListViewItemController.addListener(() {
+      final currentOffset = booksListViewItemController.offset;
+      firstVisibleItemIndex = (currentOffset ~/
+          104); //.floor(); start from the first offset when the item disappear change the number until it works,
+      //by using this we can know the index of the first visible item when scrolling
+      setState(() {});
+    });
   }
 }
 

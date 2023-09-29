@@ -4,22 +4,23 @@ import 'package:flutter/material.dart';
 class HomeViewHead extends StatelessWidget {
   const HomeViewHead({
     super.key,
-    required this.isScrolled,
+    required this.isBestSellerListViewScrolled,
   });
 
-  final bool isScrolled;
+  final bool isBestSellerListViewScrolled;
 
   @override
   Widget build(BuildContext context) {
     return AnimatedOpacity(
       duration: const Duration(milliseconds: 200),
-      opacity: isScrolled ? 0 : 1,
+      opacity: isBestSellerListViewScrolled ? 0 : 1,
       child: AnimatedContainer(
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
         alignment: Alignment.topCenter,
         duration: const Duration(milliseconds: 200),
-        height: isScrolled ? 0 : 150,
-        width: isScrolled ? 0 : MediaQuery.sizeOf(context).width,
+        height: isBestSellerListViewScrolled ? 0 : 150,
+        width:
+            isBestSellerListViewScrolled ? 0 : MediaQuery.sizeOf(context).width,
         child: const BooksListView(),
       ),
     );

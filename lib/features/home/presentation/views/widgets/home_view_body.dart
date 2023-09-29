@@ -11,15 +11,18 @@ class HomeViewBody extends StatefulWidget {
 }
 
 class _HomeViewBodyState extends State<HomeViewBody> {
-  final ScrollController controller = ScrollController();
-  bool isScrolled = false;
+  final ScrollController bestSellerListViewController = ScrollController();
+  bool isBestSellerListViewScrolled = false;
   @override
   void initState() {
+    bestSellerListViewControllerListener();
     super.initState();
-    controller.addListener(() {
-      isScrolled = controller.offset >= 100;
-      setState(() {});
-    });
+  }
+
+  @override
+  void dispose() {
+    bestSellerListViewController.dispose();
+    super.dispose();
   }
 
   @override
@@ -29,10 +32,19 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       child: Column(
         children: [
           const CustomAppBar(),
-          HomeViewHead(isScrolled: isScrolled),
-          BestSellerListView(controller: controller),
+          HomeViewHead(
+              isBestSellerListViewScrolled: isBestSellerListViewScrolled),
+          BestSellerListView(
+              bestSellerListViewController: bestSellerListViewController),
         ],
       ),
     );
+  }
+
+  void bestSellerListViewControllerListener() {
+    bestSellerListViewController.addListener(() {
+      isBestSellerListViewScrolled = bestSellerListViewController.offset >= 100;
+      setState(() {});
+    });
   }
 }

@@ -15,8 +15,9 @@ class BookWiseApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'BookWise Demo',
-      theme: ThemeData(
-        brightness: Brightness.dark,
+      theme: ThemeData.dark().copyWith(
+        //   this is the second way but you need to add copyWith function so you get a copy of ThemeData object and all its attributes
+        //   brightness: Brightness.dark, //first way to get the dark mode in the app
         scaffoldBackgroundColor: kPrimaryColor,
         useMaterial3: true,
       ),

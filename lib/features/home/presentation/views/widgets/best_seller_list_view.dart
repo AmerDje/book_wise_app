@@ -15,26 +15,23 @@ class BestSellerListView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: EdgeInsets.only(top: 18.0),
+          padding: EdgeInsets.only(top: 28.0),
           child: Text(
             "Best Seller",
             style: Styles.headline1,
           ),
         ),
         Expanded(
-          child: Container(
-            color: Colors.amberAccent,
-            child: ListView.builder(
-              controller: bestSellerListViewController,
-              itemBuilder: (context, index) {
-                return Container(
-                  height: 100,
-                  width: MediaQuery.sizeOf(context).width,
-                  color: Colors.red,
-                  margin: const EdgeInsets.only(bottom: 8),
-                );
-              },
-            ),
+          child: ListView.builder(
+            controller: bestSellerListViewController,
+            itemBuilder: (context, index) {
+              return Container(
+                height: 100,
+                width: MediaQuery.sizeOf(context).width,
+                color: Colors.red,
+                margin: const EdgeInsets.only(bottom: 8),
+              );
+            },
           ),
         ),
       ],

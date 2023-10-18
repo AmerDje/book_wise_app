@@ -1,5 +1,4 @@
-import 'package:book_wise_app/core/utils/styles.dart';
-import 'package:book_wise_app/features/home/presentation/views/widgets/books_list_view_item.dart';
+import 'package:book_wise_app/features/home/presentation/views/widgets/animated_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class BooksListView extends StatefulWidget {
@@ -20,35 +19,27 @@ class _BooksListViewState extends State<BooksListView> {
   }
 
   @override
+  void dispose() {
+    booksListViewItemController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Padding(
-          padding: EdgeInsets.only(top: 12, bottom: 16.0),
-          child: Text(
-            "Featured Books",
-            style: Styles.headline1,
-          ),
-        ),
-        Expanded(
-          child: ListView.builder(
-            controller: booksListViewItemController,
-            // itemExtent: 100,//determine the size of the children
-            scrollDirection: Axis.horizontal,
-            itemCount: 50,
-            itemBuilder: (context, index) {
-              return AnimatedPadding(
-                  duration: const Duration(milliseconds: 200),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: index == firstVisibleItemIndex ? 1 : 5,
-                    vertical: index == firstVisibleItemIndex ? 0.5 : 4,
-                  ),
-                  child: const BooksListViewItem());
-            },
-          ),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 24.0),
+      child: ListView.builder(
+        controller: booksListViewItemController,
+        // itemExtent: 100,//determine the size of the children
+        scrollDirection: Axis.horizontal,
+        itemCount: 50,
+        itemBuilder: (context, index) {
+          return AnimatedBooksListViewItem(
+            firstVisibleItemIndex: firstVisibleItemIndex,
+            index: index,
+          );
+        },
+      ),
     );
   }
 
@@ -60,7 +51,6 @@ class _BooksListViewState extends State<BooksListView> {
               149); //.floor(); start from the first offset when the item disappear change the number until it works,
       //by using this we can know the index of the first visible item when scrolling
       setState(() {});
-      print(currentOffset);
     });
   }
 }

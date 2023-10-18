@@ -18,7 +18,7 @@ class HomeViewHead extends StatelessWidget {
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
         alignment: Alignment.topCenter,
         duration: const Duration(milliseconds: 200),
-        height: isBestSellerListViewScrolled ? 0 : 150,
+        height: isBestSellerListViewScrolled ? 0 : 240,
         width:
             isBestSellerListViewScrolled ? 0 : MediaQuery.sizeOf(context).width,
         child: const BooksListView(),

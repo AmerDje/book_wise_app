@@ -9,8 +9,7 @@ class BooksListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: const EdgeInsets.all(4),
-        // margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 4),
-        width: 95,
+        width: 140,
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(8)),
             image: DecorationImage(
@@ -20,10 +19,10 @@ class BooksListViewItem extends StatelessWidget {
           child: InkWell(
             onTap: () {},
             child: const CircleAvatar(
-              radius: 17,
+              radius: 26,
               child: Icon(
                 FontAwesomeIcons.readme,
-                size: 16,
+                size: 26,
               ),
             ),
           ),

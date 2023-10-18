@@ -11,18 +11,19 @@ class BestSellerListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "Best Seller",
-              style: Styles.headline1,
-            ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Padding(
+          padding: EdgeInsets.only(top: 18.0),
+          child: Text(
+            "Best Seller",
+            style: Styles.headline1,
           ),
-          Expanded(
+        ),
+        Expanded(
+          child: Container(
+            color: Colors.amberAccent,
             child: ListView.builder(
               controller: bestSellerListViewController,
               itemBuilder: (context, index) {
@@ -30,13 +31,13 @@ class BestSellerListView extends StatelessWidget {
                   height: 100,
                   width: MediaQuery.sizeOf(context).width,
                   color: Colors.red,
-                  margin: const EdgeInsets.only(top: 8),
+                  margin: const EdgeInsets.only(bottom: 8),
                 );
               },
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

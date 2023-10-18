@@ -28,14 +28,16 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16),
+      padding: const EdgeInsets.all(10),
       child: Column(
         children: [
           const CustomAppBar(),
           HomeViewHead(
               isBestSellerListViewScrolled: isBestSellerListViewScrolled),
-          BestSellerListView(
-              bestSellerListViewController: bestSellerListViewController),
+          Expanded(
+            child: BestSellerListView(
+                bestSellerListViewController: bestSellerListViewController),
+          ),
         ],
       ),
     );

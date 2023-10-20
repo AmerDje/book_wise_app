@@ -18,9 +18,10 @@ class BooksListViewItem extends StatelessWidget {
           alignment: Alignment.bottomRight,
           child: InkWell(
             onTap: () {},
-            child: const CircleAvatar(
+            child: CircleAvatar(
+              backgroundColor: Colors.white.withOpacity(0.2),
               radius: 26,
-              child: Icon(
+              child: const Icon(
                 FontAwesomeIcons.readme,
                 size: 26,
               ),

@@ -24,6 +24,8 @@ class BestSellerListView extends StatelessWidget {
         ),
         Expanded(
           child: ListView.builder(
+            padding: EdgeInsets.zero,
+            itemCount: 10,
             controller: bestSellerListViewController,
             itemBuilder: (context, index) {
               return const BestSellerListViewBody();

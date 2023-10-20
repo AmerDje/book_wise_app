@@ -13,10 +13,7 @@ abstract class Styles {
       color: Color.fromARGB(240, 255, 255, 255),
       fontWeight: FontWeight.w400,
       fontSize: 14);
-  static const TextStyle headline4 = TextStyle(
-      color: Color.fromARGB(240, 255, 255, 255),
-      fontWeight: FontWeight.w800,
-      fontSize: 20);
+
   static const TextStyle headline5 = TextStyle(
       color: Color.fromARGB(240, 255, 255, 255),
       fontWeight: FontWeight.w700,

@@ -1,7 +1,9 @@
+import 'package:book_wise_app/core/utils/assets.dart';
 import 'package:book_wise_app/features/home/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:book_wise_app/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:book_wise_app/features/home/presentation/views/widgets/home_view_head.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
@@ -31,7 +33,16 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       padding: const EdgeInsets.all(10),
       child: Column(
         children: [
-          const CustomAppBar(),
+          CustomAppBar(
+            widget: Image.asset(
+              Assets.logo,
+              width: 150,
+            ),
+            icon: const Icon(
+              FontAwesomeIcons.magnifyingGlass,
+              size: 26,
+            ),
+          ),
           HomeViewHead(
               isBestSellerListViewScrolled: isBestSellerListViewScrolled),
           Expanded(

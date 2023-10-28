@@ -1,7 +1,6 @@
 import 'package:book_wise_app/core/utils/assets.dart';
 import 'package:book_wise_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class BestSellerListViewBody extends StatelessWidget {
   const BestSellerListViewBody({
@@ -36,21 +35,32 @@ class BestSellerListViewBody extends StatelessWidget {
                     "Harry Potter and the Goblet of Fire",
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
-                    style: Styles.headline2.copyWith(
+                    style: Styles.textStyle20.copyWith(
                       fontWeight: FontWeight.w500,
-                      fontFamily: GoogleFonts.spectral.toString(),
                     ),
                   ),
                 ),
                 const Spacer(),
                 const Text(
                   "J.K. Rowling",
-                  style: Styles.headline3,
+                  style: Styles.textStyle14,
                 ),
                 const Spacer(
                   flex: 2,
                 ),
-                const PriceAndRating(),
+                SizedBox(
+                  width: MediaQuery.sizeOf(context).width - 160,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "19.99 €",
+                        style: Styles.textStyle20,
+                      ),
+                      const Rating(),
+                    ],
+                  ),
+                ),
                 const Spacer()
               ],
             ),
@@ -61,36 +71,30 @@ class BestSellerListViewBody extends StatelessWidget {
   }
 }
 
-class PriceAndRating extends StatelessWidget {
-  const PriceAndRating({
+class Rating extends StatelessWidget {
+  const Rating({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.sizeOf(context).width - 160,
-      child: const Row(
-        children: [
-          Text(
-            "19.99 €",
-            style: Styles.headline2,
-          ),
-          Spacer(
-            flex: 3,
-          ),
-          Icon(Icons.star, size: 18, color: Color(0xFFFFDD4F)),
-          Text(
-            " 4.5",
-            style: Styles.headline5,
-          ),
-          Spacer(),
-          Text(
-            "2390",
-            style: Styles.headline3,
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Icon(Icons.star, size: 18, color: Color(0xFFFFDD4F)),
+        const Text(
+          " 4.5",
+          style: Styles.textStyle16,
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Text(
+          "(2390)",
+          style: Styles.textStyle14.copyWith(
+              fontWeight: FontWeight.w300, color: const Color(0xFF707070)),
+        ),
+      ],
     );
   }
 }

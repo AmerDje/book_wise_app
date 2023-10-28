@@ -1,5 +1,7 @@
+import 'package:book_wise_app/features/book_details/presentation/views/book_details_view.dart';
 import 'package:book_wise_app/features/home/presentation/views/widgets/animated_books_list_view_item.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class BooksListView extends StatefulWidget {
   const BooksListView({super.key});
@@ -28,17 +30,27 @@ class _BooksListViewState extends State<BooksListView> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 24.0),
-      child: ListView.builder(
-        controller: booksListViewItemController,
-        // itemExtent: 100,//determine the size of the children
-        scrollDirection: Axis.horizontal,
-        itemCount: 50,
-        itemBuilder: (context, index) {
-          return AnimatedBooksListViewItem(
-            firstVisibleItemIndex: firstVisibleItemIndex,
-            index: index,
-          );
+      child: InkWell(
+        onTap: () {
+          Get.to(() => const BookDetails(), transition: Transition.fadeIn);
         },
+        child: ListView.builder(
+          // prototypeItem: SizedBox(protoType is like give a size to list view items
+          //   height: 190,
+          //   width: 200,
+          // ),
+
+          // itemExtent: 100,//determine the size of the children
+          controller: booksListViewItemController,
+          scrollDirection: Axis.horizontal,
+          itemCount: 50,
+          itemBuilder: (context, index) {
+            return AnimatedBooksListViewItem(
+              firstVisibleItemIndex: firstVisibleItemIndex,
+              index: index,
+            );
+          },
+        ),
       ),
     );
   }

@@ -1,11 +1,9 @@
-import 'package:book_wise_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
-    super.key,
-  });
+  final Widget widget;
+  final Icon icon;
+  const CustomAppBar({super.key, required this.widget, required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +12,8 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(
-            Assets.logo,
-            width: 150,
-          ),
-          IconButton(
-              padding: EdgeInsets.zero,
-              onPressed: () {},
-              icon: const Icon(
-                FontAwesomeIcons.magnifyingGlass,
-                size: 26,
-              ))
+          widget,
+          IconButton(padding: EdgeInsets.zero, onPressed: () {}, icon: icon)
         ],
       ),
     );

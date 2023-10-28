@@ -19,7 +19,7 @@ class BestSellerListView extends StatelessWidget {
           padding: EdgeInsets.only(top: 28.0, bottom: 12),
           child: Text(
             "Best Seller",
-            style: Styles.headline1,
+            style: Styles.textStyle18,
           ),
         ),
         Expanded(

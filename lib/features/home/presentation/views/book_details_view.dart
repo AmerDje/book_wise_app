@@ -1,4 +1,4 @@
-import 'package:book_wise_app/features/book_details/presentation/views/widgets/book_details_body.dart';
+import 'package:book_wise_app/features/home/presentation/views/widgets/book_details_body.dart';
 import 'package:flutter/material.dart';
 
 class BookDetails extends StatelessWidget {

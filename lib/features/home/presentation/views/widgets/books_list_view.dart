@@ -1,4 +1,4 @@
-import 'package:book_wise_app/features/book_details/presentation/views/book_details_view.dart';
+import 'package:book_wise_app/features/home/presentation/views/book_details_view.dart';
 import 'package:book_wise_app/features/home/presentation/views/widgets/animated_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

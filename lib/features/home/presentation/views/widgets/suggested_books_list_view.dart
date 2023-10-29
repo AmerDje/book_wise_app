@@ -1,5 +1,5 @@
 import 'package:book_wise_app/core/utils/styles.dart';
-import 'package:book_wise_app/features/book_details/presentation/views/widgets/suggested_books_list_view_item.dart';
+import 'package:book_wise_app/features/home/presentation/views/widgets/suggested_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class SuggestedBooksListView extends StatelessWidget {

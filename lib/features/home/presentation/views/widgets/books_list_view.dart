@@ -1,6 +1,6 @@
-import 'package:book_wise_app/features/home/presentation/views/book_details_view.dart';
 import 'package:book_wise_app/features/home/presentation/views/widgets/animated_books_list_view_item.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BooksListView extends StatefulWidget {
   const BooksListView({super.key});
@@ -31,8 +31,7 @@ class _BooksListViewState extends State<BooksListView> {
       padding: const EdgeInsets.only(top: 24.0),
       child: InkWell(
         onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (_) => const BookDetails()));
+          context.go('/bookDetails');
         },
         child: ListView.builder(
           // prototypeItem: SizedBox(protoType is like give a size to list view items

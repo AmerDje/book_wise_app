@@ -1,7 +1,6 @@
 import 'package:book_wise_app/constant.dart';
-import 'package:book_wise_app/features/splash/presentation/splash_view.dart';
+import 'package:book_wise_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -13,7 +12,8 @@ class BookWiseApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       title: 'BookWise Demo',
       theme: ThemeData.dark().copyWith(
@@ -23,7 +23,6 @@ class BookWiseApp extends StatelessWidget {
         scaffoldBackgroundColor: kPrimaryColor,
         useMaterial3: true,
       ),
-      home: const SplashView(),
     );
   }
 }

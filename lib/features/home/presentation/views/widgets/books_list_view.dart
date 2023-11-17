@@ -31,7 +31,7 @@ class _BooksListViewState extends State<BooksListView> {
       padding: const EdgeInsets.only(top: 24.0),
       child: InkWell(
         onTap: () {
-          context.go('/bookDetails');
+          context.go('/homeView/bookDetails');
         },
         child: ListView.builder(
           // prototypeItem: SizedBox(protoType is like give a size to list view items

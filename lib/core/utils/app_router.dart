@@ -14,7 +14,7 @@ abstract class AppRouter {
       builder: (context, state) => const HomeView(),
       routes: [
         GoRoute(
-          path: '/bookDetails',
+          path: 'bookDetails',
           builder: (context, state) => const BookDetails(),
         ),
       ],

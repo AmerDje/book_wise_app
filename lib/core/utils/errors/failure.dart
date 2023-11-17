@@ -15,13 +15,6 @@ class ServerFailure extends Failure {
         return ServerFailure(
             'Connection timed out. Check your internet connection and try again.');
 
-      case DioExceptionType.badCertificate:
-        return ServerFailure(
-            'Bad certificate. Ensure the server certificate is valid.');
-
-      case DioExceptionType.cancel:
-        return ServerFailure('Connection canceled.');
-
       case DioExceptionType.connectionError:
         return ServerFailure('Server connection error. Try again later.');
 
@@ -30,6 +23,13 @@ class ServerFailure extends Failure {
 
       case DioExceptionType.receiveTimeout:
         return ServerFailure('Receiving data timed out. Try again.');
+
+      case DioExceptionType.badCertificate:
+        return ServerFailure(
+            'Bad certificate. Ensure the server certificate is valid.');
+
+      case DioExceptionType.cancel:
+        return ServerFailure('Connection canceled.');
 
       case DioExceptionType.badResponse:
         return ServerFailure.fromResponse(

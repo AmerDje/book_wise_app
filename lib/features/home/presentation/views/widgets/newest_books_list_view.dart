@@ -1,9 +1,9 @@
 import 'package:book_wise_app/core/utils/styles.dart';
-import 'package:book_wise_app/features/home/presentation/views/widgets/best_seller_list_view_body.dart';
+import 'package:book_wise_app/features/home/presentation/views/widgets/newest_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({
+class NewestBooksListView extends StatelessWidget {
+  const NewestBooksListView({
     super.key,
     required this.bestSellerListViewController,
   });
@@ -18,7 +18,7 @@ class BestSellerListView extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.only(top: 28.0, bottom: 12),
           child: Text(
-            "Best Seller",
+            "Newest Books",
             style: Styles.textStyle18,
           ),
         ),
@@ -28,7 +28,7 @@ class BestSellerListView extends StatelessWidget {
             itemCount: 10,
             controller: bestSellerListViewController,
             itemBuilder: (context, index) {
-              return const BestSellerListViewBody();
+              return const NewestBooksListViewItem();
             },
           ),
         ),

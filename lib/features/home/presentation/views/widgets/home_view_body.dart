@@ -1,5 +1,5 @@
 import 'package:book_wise_app/core/utils/assets.dart';
-import 'package:book_wise_app/features/home/presentation/views/widgets/best_seller_list_view.dart';
+import 'package:book_wise_app/features/home/presentation/views/widgets/newest_books_list_view.dart';
 import 'package:book_wise_app/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:book_wise_app/features/home/presentation/views/widgets/home_view_head.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +46,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           HomeViewHead(
               isBestSellerListViewScrolled: isBestSellerListViewScrolled),
           Expanded(
-            child: BestSellerListView(
+            child: NewestBooksListView(
                 bestSellerListViewController: bestSellerListViewController),
           ),
         ],

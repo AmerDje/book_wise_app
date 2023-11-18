@@ -3,8 +3,8 @@ import 'package:book_wise_app/core/utils/styles.dart';
 import 'package:book_wise_app/features/home/presentation/views/widgets/rating.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListViewBody extends StatelessWidget {
-  const BestSellerListViewBody({
+class NewestBooksListViewItem extends StatelessWidget {
+  const NewestBooksListViewItem({
     super.key,
   });
 
